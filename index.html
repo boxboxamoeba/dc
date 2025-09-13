@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syn3rgy | Student Innovation Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-glass {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 nav-glass border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                            <i data-feather="zap" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold text-gray-900">Syn3rgy</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#showcase" class="text-gray-700 hover:text-gray-900 font-medium transition">Showcase</a>
+                    <a href="#submit" class="text-gray-700 hover:text-gray-900 font-medium transition">Submit</a>
+                    <a href="#about" class="text-gray-700 hover:text-gray-900 font-medium transition">About</a>
+                    <button class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg hover:opacity-90 transition">
+                        Join Community
+                    </button>
+                </div>
+                
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <i data-feather="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#showcase" class="block text-gray-700 hover:text-gray-900 font-medium">Showcase</a>
+                <a href="#submit" class="block text-gray-700 hover:text-gray-900 font-medium">Submit</a>
+                <a href="#about" class="block text-gray-700 hover:text-gray-900 font-medium">About</a>
+                <button class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg">
+                    Join Community
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    Where Student <span class="text-yellow-300">Innovation</span> Meets Impact
+                </h1>
+                <p class="text-xl md:text-2xl text-white opacity-90 max-w-3xl mx-auto mb-10">
+                    Syn3rgy showcases groundbreaking ideas from student innovators worldwide. Discover the next generation of solutions that will change the world.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#showcase" class="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Explore Innovations
+                    </a>
+                    <a href="#submit" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition">
+                        Submit Your Idea
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-gradient mb-2">500+</div>
+                    <div class="text-gray-600 font-medium">Student Innovations</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-gradient mb-2">50+</div>
+                    <div class="text-gray-600 font-medium">Universities</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-gradient mb-2">25</div>
+                    <div class="text-gray-600 font-medium">Countries</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Innovations -->
+    <section id="showcase" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Featured <span class="text-gradient">Innovations</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Discover groundbreaking solutions created by students from around the world
+                </p>
+            </div>
+            
+            <!-- Category Filter -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12">
+                <button class="filter-btn active px-4 py-2 bg-purple-600 text-white rounded-full text-sm font-medium transition">All</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-300 transition">AI/ML</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-300 transition">Sustainability</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-300 transition">Health</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-300 transition">Education</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-300 transition">Social Impact</button>
+            </div>
+            
+            <!-- Innovation Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Innovation Card 1 -->
+                <div class="bg-white rounded-xl shadow-sm card-hover overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">AI/ML</span>
+                            <button class="text-gray-400 hover:text-red-500 transition">
+                                <i data-feather="heart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">EcoPredict AI</h3>
+                        <p class="text-gray-600 mb-4">Machine learning system that predicts environmental changes and suggests sustainable solutions for urban planning.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-white text-xs font-semibold">SM</span>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">Sarah Martinez</div>
+                                    <div class="text-xs text-gray-500">MIT • Computer Science</div>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-500">2 days ago</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Innovation Card 2 -->
+                <div class="bg-white rounded-xl shadow-sm card-hover overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Sustainability</span>
+                            <button class="text-gray-400 hover:text-red-500 transition">
+                                <i data-feather="heart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">PlasticCycle</h3>
+                        <p class="text-gray-600 mb-4">Innovative recycling process that converts ocean plastic into high-quality building materials for affordable housing.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-gradient-to-r from-green-600 to-teal-600 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-white text-xs font-semibold">JC</span>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">James Chen</div>
+                                    <div class="text-xs text-gray-500">Stanford • Environmental Engineering</div>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-500">1 week ago</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Innovation Card 3 -->
+                <div class="bg-white rounded-xl shadow-sm card-hover overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Health</span>
+                            <button class="text-gray-400 hover:text-red-500 transition">
+                                <i data-feather="heart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">MentalHealth Companion</h3>
+                        <p class="text-gray-600 mb-4">Mobile app using NLP to provide personalized mental health support and connect students with campus resources.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-gradient-to-r from-pink-600 to-red-600 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-white text-xs font-semibold">AP</span>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">Aisha Patel</div>
+                                    <div class="text-xs text-gray-500">Harvard • Psychology & CS</div>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-500">3 days ago</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Innovation Card 4 -->
+                <div class="bg-white rounded-xl shadow-sm card-hover overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Education</span>
+                            <button class="text-gray-400 hover:text-red-500 transition">
+                                <i data-feather="heart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">VR Lab Access</h3>
+                        <p class="text-gray-600 mb-4">Virtual reality platform that gives students in underserved areas access to advanced laboratory experiments and simulations.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-gradient-to-r from-yellow-600 to-orange-600 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-white text-xs font-semibold">MR</span>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">Maria Rodriguez</div>
+                                    <div class="text-xs text-gray-500">UC Berkeley • Education Technology</div>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-500">5 days ago</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Innovation Card 5 -->
+                <div class="bg-white rounded-xl shadow-sm card-hover overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Social Impact</span>
+                            <button class="text-gray-400 hover:text-red-500 transition">
+                                <i data-feather="heart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">FoodBridge</h3>
+                        <p class="text-gray-600 mb-4">Platform connecting restaurants with surplus food to local shelters and food banks, reducing waste and hunger simultaneously.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-white text-xs font-semibold">DL</span>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">David Liu</div>
+                                    <div class="text-xs text-gray-500">NYU • Social Entrepreneurship</div>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-500">1 week ago</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Innovation Card 6 -->
+                <div class="bg-white rounded-xl shadow-sm card-hover overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">AI/ML</span>
+                            <button class="text-gray-400 hover:text-red-500 transition">
+                                <i data-feather="heart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">StudySync AI</h3>
+                        <p class="text-gray-600 mb-4">Intelligent study planner that adapts to individual learning patterns and optimizes study schedules for maximum retention.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-white text-xs font-semibold">EN</span>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">Emma Nielsen</div>
+                                    <div class="text-xs text-gray-500">Cambridge • Cognitive Science</div>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-500">4 days ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition">
+                    View All Innovations
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Innovation -->
+    <section id="submit" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Share Your <span class="text-gradient">Innovation</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Have a groundbreaking idea? Join our community of student innovators.
+                </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-2xl p-8">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Full name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">University</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Your university">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Field of Study</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="e.g., Computer Science">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Category</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                <option>Select category</option>
+                                <option>AI/ML</option>
+                                <option>Sustainability</option>
+                                <option>Health</option>
+                                <option>Education</option>
+                                <option>Social Impact</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Innovation Title</label>
+                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Give your innovation a compelling title">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Description</label>
+                        <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Describe your innovation, the problem it solves, and its potential impact"></textarea>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tags</label>
+                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="e.g., machine-learning, sustainability, mobile-app (separated by commas)">
+                    </div>
+                    
+                    <div class="flex items-center justify-between pt-4">
+                        <div class="flex items-center">
+                            <input type="checkbox" class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded">
+                            <label class="ml-2 text-sm text-gray-700">I agree to the terms and conditions</label>
+                        </div>
+                        <button type="submit" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition">
+                            Submit Innovation
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    About <span class="text-gradient">Syn3rgy</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We believe students are the key to solving tomorrow's challenges. Syn3rgy provides a platform where innovation meets opportunity.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Empowering Student Innovation</h3>
+                    <div class="space-y-4 text-gray-600">
+                        <p>Syn3rgy connects brilliant student minds from universities worldwide, creating a collaborative ecosystem where groundbreaking ideas can flourish and find the support they need to become reality.</p>
+                        <p>Our platform showcases innovative solutions across technology, sustainability, health, education, and social impact, demonstrating the incredible potential of student-led innovation.</p>
+                        <p>Join thousands of students who are already making a difference through creative problem-solving and collaborative innovation.</p>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <button class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition mr-4">
+                            Join Our Community
+                        </button>
+                        <button class="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="lightbulb" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Innovation Hub</h4>
+                        <p class="text-gray-600 text-sm">Showcase and discover cutting-edge student innovations from around the world.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm mt-8">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-600 to-teal-600 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="users" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Global Network</h4>
+                        <p class="text-gray-600 text-sm">Connect with like-minded innovators and potential collaborators worldwide.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-gradient-to-r from-pink-600 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="trending-up" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Impact Tracking</h4>
+                        <p class="text-gray-600 text-sm">Monitor and measure the real-world impact of student innovations.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm mt-8">
+                        <div class="w-12 h-12 bg-gradient-to-r from-yellow-600 to-orange-600 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="award" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Recognition</h4>
+                        <p class="text-gray-600 text-sm">Gain recognition for your innovative work and build your academic portfolio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                            <i data-feather="zap" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold">Syn3rgy</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Connecting student innovators worldwide to create solutions for tomorrow's challenges.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#showcase" class="text-gray-400 hover:text-white transition">Browse Innovations</a></li>
+                        <li><a href="#submit" class="text-gray-400 hover:text-white transition">Submit Innovation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Featured Projects</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Success Stories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Community</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Guidelines</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Mentorship</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2024 Syn3rgy. All rights reserved.</p>
+                <p class="text-gray-400 text-sm mt-4 md:mt-0">Made with ❤️ by student innovators</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('data-feather', 'menu');
+            } else {
+                icon.setAttribute('data-feather', 'x');
+            }
+            feather.replace();
+        });
+        
+        // Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active state from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-purple-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                
+                // Add active state to clicked button
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+                button.classList.add('bg-purple-600', 'text-white');
+            });
+        });
+        
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        icon.setAttribute('data-feather', 'menu');
+                        feather.replace();
+                    }
+                }
+            });
+        });
+        
+        // Form Submission
+        const submitForm = document.querySelector('#submit form');
+        if (submitForm) {
+            submitForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your submission! We\'ll review your innovation and get back to you soon.');
+                submitForm.reset();
+            });
+        }
+        
+        // Heart/Like Button Functionality
+        document.querySelectorAll('[data-feather="heart"]').forEach(heartIcon => {
+            heartIcon.parentElement.addEventListener('click', (e) => {
+                e.preventDefault();
+                const button = heartIcon.parentElement;
+                if (button.classList.contains('text-red-500')) {
+                    button.classList.remove('text-red-500');
+                    button.classList.add('text-gray-400');
+                } else {
+                    button.classList.remove('text-gray-400');
+                    button.classList.add('text-red-500');
+                }
+            });
+        });
+        
+        // Navbar Scroll Effect
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('nav');
+        
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                navbar.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+</body>
+</html>
